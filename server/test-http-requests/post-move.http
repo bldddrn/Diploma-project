@@ -1,0 +1,7 @@
+post http://localhost:3000/move
+Content-Type: application/json
+
+{
+    "from": "f1",
+    "to": "a6"
+}
