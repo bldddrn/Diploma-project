@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const figs = {
   empty: 0,
@@ -23,11 +23,11 @@ const createSquares = (block) => {
   for (let i = 0; i < size64; i++) {
     light ^= 1;
     for (let j = 0; j < size64; j++) {
-      const div = document.createElement('div');
+      const div = document.createElement("div");
       div.id = `sq_${i}_${j}`;
       div.className = `square rank${i} file${j}`;
-      if (light) div.className += ' light';
-      else div.className += ' dark';
+      if (light) div.className += " light";
+      else div.className += " dark";
       block.append(div);
       light ^= 1;
     }
@@ -35,7 +35,7 @@ const createSquares = (block) => {
 };
 
 const clearFigures = (block) => {
-  const figures = block.querySelectorAll('.figure');
+  const figures = block.querySelectorAll(".figure");
   if (!figures.length) return;
   for (const figure of figures) {
     block.removeChild(figure);
@@ -56,10 +56,10 @@ const fillFigures = (block, board) => {
   }
 };
 
-const boardBlock = document.querySelector('#container');
+const boardBlock = document.querySelector("#container");
 createSquares(boardBlock);
 
-const ws = new WebSocket('ws://localhost:3000');
+const ws = new WebSocket("ws://16.171.147.213:4000");
 ws.onmessage = (mes) => {
   const board = JSON.parse(mes.data);
   console.log(board);

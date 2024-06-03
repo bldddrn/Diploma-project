@@ -1,7 +1,7 @@
-post http://localhost:3000/move
+post http://16.171.147.213:4000/move
 Content-Type: application/json
 
 {
-    "from": "f1",
-    "to": "a6"
+    "from": "c2",
+    "to": "c3"
 }

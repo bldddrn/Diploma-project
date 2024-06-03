@@ -28,8 +28,8 @@ app.post(`/move`, (req, res) => {
   res.status(201).end();
 });
 
-const server = app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+const server = app.listen(process.env.PORT, () => {
+  console.log(`Server started on port ${process.env.PORT}`);
 });
 
 const wss = new Ws.Server({ server });

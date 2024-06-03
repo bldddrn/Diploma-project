@@ -1,2 +1,2 @@
-post http://localhost:3000/game
+post http://16.171.147.213:4000/game
 Content-Type: application/json
